@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery DOM Manipulation Example</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+  .container {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 100px;
+  }
+  .new-content {
+    background-color: lightgreen;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+  <div class="box">Box 3</div>
+</div>
+
+<script>
+  
+  $('<div class="box new-content">Inserted after</div>').insertAfter('.container .box:last-child');
+  
+  $('<div class="box new-content">Inserted before</div>').insertBefore('.container .box:first-child');
+  
+  $('<div class="box new-content">Appended to</div>').appendTo('.container');
+  
+  $('<div class="box new-content">Prepended to</div>').prependTo('.container ');
+
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
